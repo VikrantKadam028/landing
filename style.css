@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.page1 {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+}
+.navbar {
+  width: 97%;
+  height: 50px;
+  /* position: absolute;
+    top: 0%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 0.4px solid grey;
+}
+
+.navbar p {
+  color: white;
+  font-family: poppins;
+  font-size: 24px;
+  margin-top: 2px;
+}
+
+.logo {
+  width: 130px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: auto;
+  height: 42px;
+  margin-right: 3px;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+.nav-links {
+  display: flex;
+}
+
+.navbar ul li {
+  display: inline;
+  font-size: 18px;
+  color: white;
+  font-family: poppins;
+  margin-right: 35px;
+  margin-left: auto;
+  padding: 12px 18px;
+
+  border-width: 0;
+  /* transition: color 0.5s ease; */
+}
+
+.navbar ul li:after {
+  content: "";
+  display: block;
+  /* height: 4px; */
+  width: 0;
+  transition: width 0.5s ease;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 2.9px solid;
+  border-image: linear-gradient(
+    to right,
+    #6441a5 0%,
+    #2a0845 51%,
+    #6441a5 100%
+  );
+  border-image-slice: 1;
+}
+
+.navbar ul li:hover:after {
+  width: 100%;
+}
+
+.navbar ul li:hover {
+  background: transparent;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar button {
+  background-image: linear-gradient(
+    to right,
+    #6441a5 0%,
+    #2a0845 51%,
+    #6441a5 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: poppins;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.videofootage {
+  /* width: 100%;
+    height: 500px;
+    position: relative;
+    
+    position: relative; */
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
+
+.videofootage video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.textupper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(25, 25, 25, 0.577);
+  /* background: transparent; */
+  backdrop-filter: blur(8px);
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textupper h2 {
+  position: relative;
+  font-size: 95px;
+  color: white;
+  font-family: poppins;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  line-height: 110%;
+
+  animation: slideIn 1.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  /*H1 heading*/
+  from {
+    transform: translateY(-80%);
+    /* Start position above */
+  }
+
+  to {
+    transform: translateY(0%);
+    /* End position at the top */
+  }
+}
+
+.textupper p {
+  font-size: 16px;
+  color: white;
+  font-family: poppins;
+  margin-top: 9px;
+  text-shadow: black 1px 0 4px;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  /*H2 heading*/
+  from {
+    opacity: 0;
+    /* Start position above */
+  }
+
+  to {
+    opacity: 1;
+    /* End position at the top */
+  }
+}
+.textupper h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  z-index: -1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.textupper h2 span {
+  /* background: linear-gradient(100.5deg, rgb(148, 146, 236) 17.7%, rgb(245, 194, 194) 76.1%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent; */
+  background: linear-gradient(
+    100.5deg,
+    rgb(148, 146, 236) 17.7%,
+    rgb(245, 194, 194) 76.1%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+#Btn1 {
+  position: relative;
+  padding: 14px 22px;
+  font-size: 16px;
+  background-image: linear-gradient(
+    to right,
+    #6441a5 0%,
+    #2a0845 51%,
+    #6441a5 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-family: poppins;
+  bottom: -8%;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.447);
+  text-align: center;
+}
+
+#Btn1:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+#Btn1 .arrow {
+  display: inline-block;
+  animation: moveArrow 3s infinite;
+  animation-delay: 4s;
+}
+
+.tag {
+  width: 100%;
+  height: 30px;
+  background-color: #161619;
+  color: white;
+  padding: 10px 10px;
+  font-family: poppins;
+  padding-left: 20px;
+}
+.tag p {
+  color: grey;
+  
+}
+
+.tag p span {
+  font-weight: 500;
+  color: white;
+}
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    margin-right: 30px;
+  }
+  .nav-links {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    width: 79%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 22px;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 8px auto;
+    z-index: 2;
+  }
+  .nav-links.active {
+    display: block;
+    margin-right: 30px;
+  }
+  .navbar button {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar ul li {
+    display: block;
+    width: 84%;
+  }
+  .navbar ul li a {
+    margin-right: 0;
+    padding: 10px;
+  }
+  .videofootage {
+    height: 370px;
+  }
+
+  .textupper {
+    backdrop-filter: blur(6px);
+  }
+  .textupper h2 {
+    font-size: 45px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  .textupper p {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #Btn1 {
+    font-size: 14px;
+    width: 90%;
+    border-radius: 10px;
+  }
+  .navbar {
+    background-color: #161619;
+    height: 60px;
+  }
+  
+}
